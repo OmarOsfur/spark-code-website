@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تواصل معنا | Spark Code</title>
+<link href="./style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body><a class="logo-link" href="index.html"><img alt="Spark Code Logo" class="site-logo" src="./logo.png"/></a><h2 class="page-title">تواصل معنا</h2>
+<a class="contact-subtitle" href="index.html">
+
+</a>
+<div class="index-style-3" id="sidebar">
+<a class="index-style-4" href="index.html">الرئيسية</a>
+<a class="index-style-5" href="courses.html">الدورات</a>
+<a class="index-style-6" href="services.html">خدماتنا</a>
+<a class="index-style-7" href="contact.html">تواصل معنا</a>
+<a class="index-style-8" href="student.html">تسجيل الطالب</a>
+<a class="index-style-9" href="about.html">من نحن</a>
+</div>
+<span class="sc-shared-6 sidebar-toggle" onclick="toggleSidebar()">☰</span>
+<script>
+  function toggleSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    if (sidebar.style.right === "-250px") {
+      sidebar.style.right = "0";
+    } else {
+      sidebar.style.right = "-250px";
+    }
+  }
+</script>
+<section class="content">
+<div class="hero-text">
+<p>هل لديك استفسار أو ترغب بالتسجيل في إحدى دوراتنا؟ أرسل لنا رسالتك وسنرد عليك في أقرب وقت.</p>
+</div>
+<form id="contactForm">
+<input name="name" placeholder="الاسم الكامل" required="" type="text"/>
+<input name="email" placeholder="البريد الإلكتروني" required="" type="email"/>
+<textarea name="message" placeholder="اكتب رسالتك هنا..." required=""></textarea>
+<button class="btn" type="submit">إرسال</button>
+</form>
+</section>
+<footer>
+    © 2025 Spark Code - جميع الحقوق محفوظة
+  </footer>
+<script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim()
+      };
+
+      try {
+        const response = await fetch('/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          Swal.fire({
+            icon: 'success',
+            title: 'تم الإرسال!',
+            text: result.message,
+            confirmButtonText: 'موافق'
+          });
+          form.reset();
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'خطأ!',
+            text: result.error || 'حدث خطأ أثناء الإرسال',
+            confirmButtonText: 'موافق'
+          });
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'خطأ بالشبكة',
+          text: 'لم يتم الاتصال بالخادم',
+          confirmButtonText: 'موافق'
+        });
+      }
+    });
+  </script>
+<button id="scrollTopBtn" onclick="scrollToTop()" title="الرجوع للأعلى">↑</button>
+<script>
+  var scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+  function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+</script>
+<script src="./main.js"></script>
+<script src="./main.js" defer></script>
+</body>
+</html>

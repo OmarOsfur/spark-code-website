@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>خدماتنا | Spark Code</title>
+<link href="./style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body><a class="logo-link" href="index.html"><img alt="Spark Code Logo" class="site-logo" src="./logo.png"/></a><h2 class="page-title">خدماتنا</h2>
+<a class="services-subtitle" href="index.html">
+
+</a>
+<div class="index-style-3" id="sidebar">
+<a class="index-style-4" href="index.html">الرئيسية</a>
+<a class="index-style-5" href="courses.html">الدورات</a>
+<a class="index-style-6" href="services.html">خدماتنا</a>
+<a class="index-style-7" href="contact.html">تواصل معنا</a>
+<a class="index-style-8" href="student.html">تسجيل الطالب</a>
+<a class="index-style-9" href="about.html">من نحن</a>
+</div>
+<span class="sc-shared-6 sidebar-toggle" onclick="toggleSidebar()">☰</span>
+<script>
+  function toggleSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    if (sidebar.style.right === "-250px") {
+      sidebar.style.right = "0";
+    } else {
+      sidebar.style.right = "-250px";
+    }
+  }
+</script>
+<section class="content">
+<div class="hero-text">
+<p>نقدم في Spark Code مجموعة من الخدمات التقنية والتعليمية المصممة لتلبية احتياجات الأفراد والشركات والمؤسسات التعليمية.</p>
+</div>
+<section class="features">
+<div class="card">
+<p>دورات مخصصة، تدريب جماعي أو فردي، ورش عمل عملية مع شهادات إتمام.</p>
+</div>
+<div class="card">
+<p>تصميم وبرمجة مواقع وتطبيقات كاملة، من التخطيط حتى التسليم.</p>
+</div>
+<div class="card">
+<p>خدمات احترافية لتحليل متطلبات العملاء وبناء نظم برمجية فعالة.</p>
+</div>
+<div class="card">
+<p>مساعدتك في اتخاذ القرارات البرمجية الصحيحة، وتقييم المشاريع وتطويرها.</p>
+</div>
+</section>
+</section>
+<footer>
+    © 2025 Spark Code - جميع الحقوق محفوظة
+  </footer>
+<button id="scrollTopBtn" onclick="scrollToTop()" title="الرجوع للأعلى">↑</button>
+<script>
+  var scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+  function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+</script>
+<script src="./main.js"></script>
+<script src="./main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تسجيل الطالب | Spark Code</title>
+<link href="./style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<script src="./main.js"></script>
+</head>
+<body><a class="logo-link" href="index.html"><img alt="Spark Code Logo" class="site-logo" src="./logo.png"/></a>
+<div class="index-style-3" id="sidebar">
+<a class="index-style-4" href="index.html">الرئيسية</a>
+<a class="index-style-5" href="courses.html">الدورات</a>
+<a class="index-style-6" href="services.html">خدماتنا</a>
+<a class="index-style-7" href="contact.html">تواصل معنا</a>
+<a class="index-style-8" href="student.html">تسجيل الطالب</a>
+<a class="index-style-9" href="about.html">من نحن</a>
+</div>
+<h2 class="page-title">تسجيل الطالب</h2>
+<span class="student-box sidebar-toggle" onclick="toggleSidebar()">☰</span>
+<script>
+          function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("sidebar-hidden"); sidebar.classList.toggle("sidebar-visible");
+          }
+        </script>
+<div class="student-section"><div class="student-form-container student-section">
+<form action="/api/student-registration" class="student-form" method="post">
+<input class="student-input" name="fullName" placeholder="الاسم الكامل" required="" type="text"/>
+<input class="student-input" name="email" placeholder="البريد الإلكتروني" required="" type="email"/>
+<input class="student-input" name="phone" placeholder="رقم الهاتف" required="" type="text"/>
+<input class="student-input" name="courseName" placeholder="اسم الدورة" required="" type="text"/>
+<textarea class="student-input" name="note" placeholder="ملاحظات إضافية" rows="4"></textarea>
+<button class="student-submit-btn" type="submit">إرسال الطلب</button>
+</form>
+</div><div class="student-description student-title">
+    من خلال هذه الصفحة يمكنك إدخال بياناتك الشخصية واختيار الدورة التي ترغب بالالتحاق بها في Spark Code.<br/><br/>
+    سيتم مراجعة طلبك من قِبل فريقنا والتواصل معك في أقرب وقت ممكن.
+  </div></div>
+<script src="./main.js" defer></script>
+</body>
+</html>

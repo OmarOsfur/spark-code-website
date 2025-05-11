@@ -1,0 +1,768 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: #0a0a0a;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1e90ff;
+  font-weight: bold;
+  font-size: 1.1em;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #1e90ff;
+  transition: 0.4s ease-in-out;
+}
+
+nav a:hover {
+  color: #63b3ed;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+section.content {
+  padding: 60px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.8em;
+  color: #1e90ff;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: #1e90ff;
+  color: #000;
+  padding: 14px 30px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #0077dd;
+  transform: scale(1.05);
+  color: white;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.card {
+  background-color: #111;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(30, 144, 255, 0.2);
+  width: 320px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(30, 144, 255, 0.4);
+}
+
+.card h3 {
+  color: #1e90ff;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 1.05em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(30, 144, 255, 0.3);
+}
+
+input, textarea {
+  padding: 14px;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #222;
+  color: #fff;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #1e90ff;
+  background-color: #111;
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+footer {
+  background-color: #0a0a0a;
+  padding: 20px;
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+
+/* ==== from index.html ==== */
+body {
+    background-color: #0a0a0a;
+    color: white;
+    font-family: 'Cairo', 'Segoe UI', sans-serif;
+  }
+  nav {
+    background-color: #000;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  nav a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+  nav a:hover {
+    background-color: #00aaff;
+    color: white !important;
+  }
+
+
+
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9999;
+    font-size: 18px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #scrollTopBtn:hover {
+    background-color: #008ecc;
+  }
+
+/* ==== from about.html ==== */
+body {
+    background-color: #0a0a0a;
+    color: white;
+    font-family: 'Cairo', 'Segoe UI', sans-serif;
+  }
+  nav {
+    background-color: #000;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  nav a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+  nav a:hover {
+    background-color: #00aaff;
+    color: white !important;
+  }
+
+
+
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9999;
+    font-size: 18px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #scrollTopBtn:hover {
+    background-color: #008ecc;
+  }
+
+/* ==== from contact.html ==== */
+body {
+    background-color: #0a0a0a;
+    color: white;
+    font-family: 'Cairo', 'Segoe UI', sans-serif;
+  }
+  nav {
+    background-color: #000;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  nav a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+  nav a:hover {
+    background-color: #00aaff;
+    color: white !important;
+  }
+
+
+
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9999;
+    font-size: 18px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #scrollTopBtn:hover {
+    background-color: #008ecc;
+  }
+
+/* ==== from courses.html ==== */
+body {
+    background-color: #0a0a0a;
+    color: white;
+    font-family: 'Cairo', 'Segoe UI', sans-serif;
+  }
+  nav {
+    background-color: #000;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  nav a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+  nav a:hover {
+    background-color: #00aaff;
+    color: white !important;
+  }
+
+
+
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9999;
+    font-size: 18px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #scrollTopBtn:hover {
+    background-color: #008ecc;
+  }
+
+/* ==== from services.html ==== */
+body {
+    background-color: #0a0a0a;
+    color: white;
+    font-family: 'Cairo', 'Segoe UI', sans-serif;
+  }
+  nav {
+    background-color: #000;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  nav a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+  nav a:hover {
+    background-color: #00aaff;
+    color: white !important;
+  }
+
+
+
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9999;
+    font-size: 18px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #scrollTopBtn:hover {
+    background-color: #008ecc;
+  }
+
+/* ==== from student.html ==== */
+body {
+      background-color: #0a0a0a;
+      color: white;
+      font-family: 'Cairo', 'Segoe UI', sans-serif;
+    }
+    nav {
+      background-color: #000;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      padding: 8px 12px;
+      border-radius: 10px;
+    }
+    nav a:hover {
+      background-color: #00aaff;
+      color: white !important;
+    }
+  
+
+
+  body {
+    background-color: #0a0a0a;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+  }
+  .page-title {
+    text-align: center;
+    color: #00aaff;
+    font-size: 30px;
+    margin-top: 50px;
+  }
+  .student-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+  .student-description {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    color: #ccc;
+    font-size: 18px;
+    text-align: right;
+  }
+  .student-form-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background: #1a1a1a;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0,170,255,0.25);
+    border-radius: 14px;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #222;
+    color: white;
+  }
+  button[type="submit"] {
+    width: 100%;
+    background-color: #00aaff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"]:hover {
+    background-color: #008ecc;
+  }
+  @media (max-width: 768px) {
+    .student-section {
+      flex-direction: column;
+      align-items: center;
+    }
+    .student-description {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+
+/* ==== Auto-generated from inline styles ==== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==== Shared Classes Extracted from Inline Styles ==== */
+
+.subheading { position: fixed; top: 15px; left: 15px; z-index: 10000; }
+.hero-section { height: 45px; width: auto; border-radius: 6px; }
+
+.nav-link { display: block; padding: 12px; color: #00aaff; text-decoration: none; font-family: 'Cairo', sans-serif; }
+.nav-link-hover { font-size: 28px; cursor: pointer; color: #00aaff; position: fixed; top: 20px; right: 20px; z-index: 10001; }
+
+
+/* ==== Student Dashboard Styling ==== */
+.student-form {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.student-input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #222;
+  color: white;
+}
+
+.student-submit-btn {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.student-submit-btn:hover {
+  background-color: #0088cc;
+}
+
+/* ==== Student Page Specific ==== */
+.student-box {
+  cursor: pointer;
+  font-size: 26px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10001;
+  color: #00aaff;
+}
+
+.sidebar-hidden {
+  right: -250px;
+}
+
+.sidebar-visible {
+  right: 0;
+}
+
+/* ==== Site Logo ==== */
+.site-logo {
+  height: 45px;
+  width: auto;
+  border-radius: 6px;
+}
+
+
+/* ==== Extracted from inline styles in index.html ==== */
+
+.index-style-2 { position: fixed; top: 15px; left: 15px; z-index: 10000; }
+.index-style-3 { width: 250px; height: 100%; background-color: #000; position: fixed; top: 0; right: -250px; transition: 0.3s; padding-top: 60px; z-index: 9999; }
+.index-style-4 { display: block; padding: 12px; color: #00aaff; text-decoration: none; font-family: 'Cairo', sans-serif; }
+.index-style-5 { display: block; padding: 12px; color: #00aaff; text-decoration: none; font-family: 'Cairo', sans-serif; }
+.index-style-6 { display: block; padding: 12px; color: #00aaff; text-decoration: none; font-family: 'Cairo', sans-serif; }
+.index-style-7 { display: block; padding: 12px; color: #00aaff; text-decoration: none; font-family: 'Cairo', sans-serif; }
+.index-style-8 { display: block; padding: 12px; color: #00aaff; text-decoration: none; font-family: 'Cairo', sans-serif; }
+.index-style-9 { display: block; padding: 12px; color: #00aaff; text-decoration: none; font-family: 'Cairo', sans-serif; }
+.index-style-10 { font-size: 28px; cursor: pointer; color: #00aaff; position: fixed; top: 20px; right: 20px; z-index: 10001; }
+.index-style-11 { text-decoration:none; }
+
+/* ==== Sidebar Toggle Button ==== */
+.sidebar-toggle {
+  cursor: pointer;
+  font-size: 26px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10001;
+  color: #00aaff;
+}
+
+/* ==== Sidebar Container ==== */
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 9999;
+}
+
+/* ==== Page Title ==== */
+.page-title {
+  text-align: center;
+  font-size: 40px;
+  color: #00aaff;
+  margin-top: 60px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: bold;
+}
+
+/* ==== Logo Link ==== */
+.logo-link {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 10000;
+}
+
+
+
+/* نسخة مضغوطة جدًا من نموذج تسجيل الطالب */
+.student-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 5px;
+}
+
+.student-form {
+  background-color: #111;
+  padding: 12px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(30, 144, 255, 0.12);
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.student-input {
+  padding: 7px 9px;
+  font-size: 0.85em;
+  border: none;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  outline: none;
+}
+
+.student-input:focus {
+  border: 1px solid #1e90ff;
+}
+
+.student-input[type="text"],
+.student-input[type="email"] {
+  height: 34px;
+}
+
+textarea.student-input {
+  height: 60px;
+  resize: vertical;
+}
+
+.student-submit-btn {
+  background-color: #1e90ff;
+  color: #fff;
+  font-size: 0.9em;
+  padding: 9px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.student-submit-btn:hover {
+  background-color: #0f70d4;
+}
